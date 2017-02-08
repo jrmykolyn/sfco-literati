@@ -1,6 +1,6 @@
 {
   "name": "sfco-literati",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Literati provides a series of wrappers around Node's 'File System' module.",
   "main": "index.js",
   "scripts": {
