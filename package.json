@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrmykolyn/sfco-literati.git"
+  },
   "author": "Jesse R Mykolyn",
   "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jrmykolyn/sfco-literati/issues"
+  },
+  "homepage": "https://github.com/jrmykolyn/sfco-literati#readme",
   "dependencies": {
     "bluebird": "^3.4.7"
   }
