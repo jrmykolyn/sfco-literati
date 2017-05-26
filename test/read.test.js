@@ -8,6 +8,7 @@
 // --------------------------------------------------
 // Node
 const assert = require( 'assert' );
+const StringDecoder = require( 'string_decoder' ).StringDecoder;
 
 // Vendor
 const Promise = require( 'bluebird' );
@@ -15,6 +16,13 @@ const Promise = require( 'bluebird' );
 // Project
 const literati = require( '../' );
 const read = literati.read;
+
+// --------------------------------------------------
+// DECLARE VARS
+// --------------------------------------------------
+const ROOT_DIR = `${__dirname}/../`;
+const TEST_DIR = `${ROOT_DIR}/test`;
+const decoder = new StringDecoder( 'utf8' );
 
 // --------------------------------------------------
 // TESTS
@@ -36,9 +44,27 @@ describe( 'literati.read', function() {
 			);
 	} );
 
-	/// TODO[@jrmykolyn] - Complete 'pending' test below.
-	it( 'Should throw an error when invoked with an invalid file path.' );
+	it( 'Should throw an error when invoked with an invalid file path.', function( done ) {
+		read( 'invalid/file/path' )
+			.then( () => {
+				done( new Error( 'Function incorrectly `resolved` when invoked with an invalid file path.' ) );
+			} )
+			.catch( () => {
+				done();
+			} );
+	} );
 
-	/// TODO[@jrmykolyn] - Complete 'pending' test below.
-	it( 'Should resolve with the correct data when invoked with a valid file path.' );
+	it( 'Should resolve with the correct data when invoked with a valid file path.', function( done ) {
+		read( `${TEST_DIR}/data/input.txt` )
+			.then( ( data ) => {
+				return decoder.write( data );
+			} )
+			.then( ( text ) => {
+				assert( typeof text === 'string' );
+				done();
+			} )
+			.catch( ( err ) => {
+				done( err );
+			} );
+	} );
 } );
