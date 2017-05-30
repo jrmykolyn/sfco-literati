@@ -1,3 +1,10 @@
+# Node
 node_modules/
 npm-debug.log
+
+# Testing
+.nyc_output
+.coveralls.yml
+
+# Misc
 temp/
