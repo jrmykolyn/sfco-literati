@@ -4,7 +4,8 @@
   "description": "Literati provides a series of wrappers around Node's 'File System' module.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "nyc mocha",
+    "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -20,7 +21,9 @@
     "bluebird": "^3.4.7"
   },
   "devDependencies": {
+    "coveralls": "^2.13.1",
     "eslint": "^3.19.0",
-    "mocha": "^3.4.2"
+    "mocha": "^3.4.2",
+    "nyc": "^10.3.2"
   }
 }
