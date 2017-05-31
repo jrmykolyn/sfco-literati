@@ -10,7 +10,7 @@ var append = require( './lib/write' );
 // API
 // --------------------------------------------------
 module.exports = {
-    read: read,
-    write: write,
+	read: read,
+	write: write,
 	append: append
 };
