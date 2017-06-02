@@ -8,6 +8,7 @@
 // --------------------------------------------------
 // Node
 const assert = require( 'assert' );
+const fs = require( 'fs' );
 const StringDecoder = require( 'string_decoder' ).StringDecoder;
 
 // Vendor
@@ -28,6 +29,20 @@ const decoder = new StringDecoder( 'utf8' );
 // TESTS
 // --------------------------------------------------
 describe( 'literati.read', function() {
+	// Setup
+	before( function() {
+		fs.writeFile( `${TEST_DIR}/data/input.txt`, 'This is the input text.', function( err ) {
+			if ( err ) { throw err; }
+		} );
+	} );
+
+	// Teardown
+	after( function() {
+		fs.unlink( `${TEST_DIR}/data/input.txt`, function( err ) {
+			if ( err ) { throw err; }
+		} );
+	} );
+
 	it( 'Should return a Promise when invoked.', function( done ) {
 		var ref = read()
 			.catch( () => {

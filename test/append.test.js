@@ -38,6 +38,7 @@ describe( 'literati.append', function() {
 		} );
 	} );
 
+	// Teardown
 	/// TODO[@jrmykolyn] - Replace duplicate `unlink` call with regex.
 	after( function() {
 		fs.unlink( `${TEST_DIR}/data/append.txt`, function( err ) {
