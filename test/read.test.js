@@ -21,7 +21,7 @@ const read = literati.read;
 // --------------------------------------------------
 // DECLARE VARS
 // --------------------------------------------------
-const ROOT_DIR = `${__dirname}/../`;
+const ROOT_DIR = `${__dirname}/..`;
 const TEST_DIR = `${ROOT_DIR}/test`;
 const decoder = new StringDecoder( 'utf8' );
 
