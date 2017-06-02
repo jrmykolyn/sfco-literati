@@ -5,6 +5,7 @@ npm-debug.log
 # Testing
 .nyc_output
 .coveralls.yml
+coverage/
 
 # Misc
 temp/
