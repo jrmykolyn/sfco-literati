@@ -3,7 +3,7 @@
 // --------------------------------------------------
 var read = require( './lib/read' );
 var write = require( './lib/write' );
-var append = require( './lib/write' );
+var append = require( './lib/append' );
 
 
 // --------------------------------------------------
