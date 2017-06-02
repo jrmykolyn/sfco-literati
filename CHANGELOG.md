@@ -10,6 +10,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/) and this p
 - Built out tests for `literati#read()` (`test/read.test.js`).
 - Added `CHANGELOG` file to project.
 - Added `.editorconfig` and `.eslintrc.js` files to project.
+- Added `literati#append()` method to module (`lib/append.js`).
+- Built out tests for `literati#append()` (`test/append.test.js`).
+- Integrated [Travis CI](https://travis-ci.org/) into project.
+- Added [Instanbul](https://istanbul.js.org/) to project project via `nyc`.
+- Integrated [Coveralls](https://coveralls.io/) into project.
+- Added `Travis CI` and `Coveralls` badges to `README` file.
 
 ### Changed
 - Updated `package.json` to run Mocha tests on `npm test`.
